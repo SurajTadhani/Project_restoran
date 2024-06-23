@@ -92,9 +92,7 @@ h2{
 }
 
 
-body, html {
-  min-height: 100vh;
-}
+
 *, ::after, ::before {
   box-sizing: border-box;
 }

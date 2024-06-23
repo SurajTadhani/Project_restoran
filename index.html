@@ -2,16 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logo/logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>restoran</title>
     <link rel="icon" type="image/svg" href="" />
+    <!-- import external css file -->
     <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- import Aos css file -->
     <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
+
+    <!-- import font-awesome file -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+
+    <!-- import external javascript file -->
     <script type="module" src="./js/index.js"></script>
 
     <!-- Google font import -->
@@ -25,10 +32,13 @@
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/sheet-slider@3/dist/css/main.min.css"
     />
+     <!-- import bootstrap  file -->
+
     <link
       rel="stylesheet"
       href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+   
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       defer
@@ -232,7 +242,7 @@
           <div class="col-lg-6">
             <div class="container" data-aos="zoom-in-up">
               <div class="containar">
-                <h2>
+                <h2 class="fs-1">
                   About Us
                   <hr class="w-25 m-start" />
                 </h2>
@@ -284,7 +294,7 @@
               <div class="container py-2">
                 <a
                   href=""
-                  class="btn bg-warning py-sm-3 px-sm-5 me-3 animated slideInLeft"
+                  class="btn bg-warning text-light py-sm-3 px-sm-5 me-3 animated slideInLeft"
                   >Read More</a
                 >
               </div>
@@ -866,11 +876,7 @@
                     src="https://miro.medium.com/v2/resize:fit:1400/0*OuSIEprF8jIzBc4g"
                     alt=""
                   />
-                  <!-- <img
-                    class="sheet-image"
-                    style="width: 80%"
-                    src="/testimonial/testmonial_5.jpg"
-                  /> -->
+                 
                   <div class="sheet-meta">
                     <h4 class="sheet-title">24/7 service availability</h4>
                     <p class="sheet-text">Greate spaces for dinner</p>
@@ -975,37 +981,6 @@
     </section>
     <!-- FOOTER SECTION END -->
 
-    <script>
-      // Github => github.com/zkreations/SheetSlider
-      // NPM => npmjs.com/package/sheet-slider
-
-      // Auto (optional)
-      function initializeSlider(slider) {
-        const time = slider.dataset.sheetTime || 3000;
-        const inputs = slider.querySelectorAll("input");
-        let index = 0;
-        let intervalId;
-
-        function updateInputState() {
-          inputs[index].checked = false;
-          index = (index + 1) % inputs.length;
-          inputs[index].checked = true;
-        }
-
-        function startInterval() {
-          index = Array.from(inputs).findIndex((input) => input.checked) || 0;
-          intervalId = setInterval(updateInputState, time);
-        }
-
-        const stopInterval = () => clearInterval(intervalId);
-
-        startInterval();
-
-        slider.addEventListener("mouseenter", stopInterval);
-        slider.addEventListener("mouseleave", startInterval);
-      }
-
-      document.querySelectorAll("[data-sheet-time]").forEach(initializeSlider);
-    </script>
+   
   </body>
 </html>
